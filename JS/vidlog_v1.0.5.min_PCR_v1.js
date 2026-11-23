@@ -292,9 +292,9 @@ function initialize() {
 	finishLoading();
 	/*
 	 * One PCR color system for every SHR segment.
-	 * Green  = PCR >= 6.5
-	 * Yellow = 4.5 <= PCR < 6.5
-	 * Red    = PCR < 4.5
+	 * Green  = PCR >= 7.5
+	 * Yellow = 6.5 <= PCR < 7.5
+	 * Red    = PCR < 6.5
 	 * Gray   = missing/invalid PCR (All Roads only)
 	 */
 	function cleanFilterValue(value) {
@@ -369,10 +369,10 @@ function initialize() {
 		var color = '#808080';
 
 		if (!isNaN(pcr)) {
-			if (pcr >= 6.5) {
+			if (pcr >= 7.5) {
 				category = 'GREEN';
 				color = '#00C853';
-			} else if (pcr >= 4.5) {
+			} else if (pcr >= 6.5) {
 				category = 'YELLOW';
 				color = '#FFD600';
 			} else {
